@@ -1,0 +1,11 @@
+<div [formGroup]="group">
+  <mat-form-field class="mat-form-field-fluid">
+    <mat-select [placeholder]="config.placeholder"
+                [formControlName]="config.name"
+                [(value)]="config.selected">
+      <mat-option *ngFor="let option of config.options" value="{{ option.cfgKey }}">{{option.cfgValue}}</mat-option>
+    </mat-select>
+    <!--<mat-hint align="start">Select-->
+      <!--<strong>{{config.placeholder}}</strong></mat-hint>-->
+  </mat-form-field>
+</div>
